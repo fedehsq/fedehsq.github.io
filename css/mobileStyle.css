@@ -1,0 +1,160 @@
+    
+    /* All Mobile Sizes (devices and browser) */
+    @media only screen and (max-width: 767px) {
+        
+            html, body{
+                 margin: 0px;
+                 padding: 0px;
+             }
+         
+             img:hover {
+                 cursor: pointer;
+             }
+         
+             .button {
+                 background-color: lightskyblue;
+                 transition-duration: 0.4s;
+                 border: none;
+                 padding: 12px 28px;
+                 text-align: center;
+                 text-decoration: none;
+                 display: inline-block;
+                 font-size: 16px;
+                 margin: 4px 2px;
+                 border-radius: 2px;
+                 transition: all 0.5s;
+                 cursor: pointer;
+                 font-family: 'Poppins', sans-serif;
+               }
+               
+             
+               .button:hover {
+                 background-color: white; 
+                 border: none;
+               }
+             
+               
+         
+               .button span {
+                 cursor: pointer;
+                 display: inline-block;
+                 position: relative;
+                 transition: 0.5s;
+               }
+               
+               .button span:after {
+                 content: '\00bb';
+                 position: absolute;
+                 opacity: 0;
+                 top: 0;
+                 right: -20px;
+                 transition: 0.5s;
+               }
+               
+               .button:hover span {
+                 padding-right: 25px;
+               }
+               
+               .button:hover span:after {
+                 opacity: 1;
+                 right: 0;
+               }
+         
+         
+             a:link {
+             color: blue;
+             background-color: transparent;
+             text-decoration: none;
+             }
+         
+             a:visited {
+             color: blue;
+             background-color: transparent;
+             text-decoration: none;
+             }
+            
+             .text {
+                 margin-left: 5%;
+                 margin-right: 5%;
+                 font-family: 'Poppins', sans-serif;
+             }
+         
+             .title {
+                 margin-top: 10%;
+                 font-size: x-large;
+                 text-align: center;
+                 font-family: 'Poppins', sans-serif;
+                 color: rgb(255, 255, 255);
+             }
+         
+             .whiteBackground {
+                 background-color: white;
+             }
+         
+            
+         
+             .services {
+                 margin-left: 5%;
+                 margin-right: 5%;
+                 color: black;
+                 font-family: 'Poppins', sans-serif;
+             }
+         
+             .studies {
+                 margin-left: 5%;
+                 margin-right: 5%;
+                 color: black;
+                 font-family: 'Poppins', sans-serif;
+             }
+         
+             .project {
+                 margin-left: 5%;
+                 margin-right: 5%;
+                 color: black;
+                 font-family: 'Poppins', sans-serif;
+             }
+         
+             .aboutMeText {
+                 z-index: 1;
+                 text-align: center;
+                 margin-left: 5%;
+                 margin-bottom: 10%;
+                 margin-right: 5%;
+                 font-family: 'Poppins', sans-serif;
+             }
+         
+         
+             
+             /* transparency
+                 background-color: rgba(255,255,255,0.6);
+                 background-blend-mode: lighten;
+                                 
+             }
+         */
+         
+             .backgroundAboutMeImage:before {
+                 content: "";
+                 background-position: center;
+                 position: absolute;
+                 z-index: -1;
+                 top: 0;
+                 bottom: 0;
+                 left: 0;
+                 right: 0;
+                 background-image: url(../images/programming.svg);
+                 background-repeat: no-repeat;
+                 background-size: 100%;
+                 height: 100%;
+                 width: 100%;
+                 opacity: 0.4;
+                 }
+         
+             .backgroundProject {
+                 background-color: rgba(255,255,255,0.8);
+                 background-blend-mode: lighten;
+                 background-image: url(../images/mobile.svg);
+                 background-repeat: no-repeat, no-repeat;
+                 background-position: center;
+                 background-size: 50%;
+             }
+         }
