@@ -101,7 +101,13 @@
 
     <script>
         function foo() {
-            window.open("https://drive.google.com/uc?export=view&id=1Cb32MP8P24Vp047ljbeBPqcVcnEBQrQv", '_blank');
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) {
+                window.open("https://github.com/fedehsq/fedehsq.github.io/raw/master/curriculum.pdf", '_blank');
+            } else {
+                window.open("https://drive.google.com/uc?export=view&id=1Cb32MP8P24Vp047ljbeBPqcVcnEBQrQv", '_blank');
+            }
+
         }
     </script>
 
