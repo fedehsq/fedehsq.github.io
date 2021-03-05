@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 
 import 'Lesson.dart';
 
@@ -40,13 +41,16 @@ class _TimeTableState extends State<TimeTable> {
 
 
 
+
   @override
   void initState() {
     for (int i = 0; i < widget.lessons.length; i++) {
       toShow.add(true);
     }
     super.initState();
+    SchedulerBinding.instance.addPostFrameCallback((_) => _showInstructions());
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +67,6 @@ class _TimeTableState extends State<TimeTable> {
                 getRowLegend(i),
               getTitle(),
               Table(
-                columnWidths: {0: FractionColumnWidth(.1)},
                 defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                 border: TableBorder.all(color: Colors.black),
                 children: [
@@ -77,6 +80,35 @@ class _TimeTableState extends State<TimeTable> {
         ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+
+
+  Future<void> _showInstructions() async {
+    return showDialog<void>(
+      barrierDismissible: false,
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Materia'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text("Tocca le celle della matrice per costruire il tuo orario.")
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: Text('Ho capito'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            )
+
+          ],
+        );
+      },
     );
   }
 
@@ -193,6 +225,7 @@ class _TimeTableState extends State<TimeTable> {
             child: ListBody(
               children: <Widget>[
                 TextField(
+                  maxLength: 15,
                   controller: controller,
                 )
               ],

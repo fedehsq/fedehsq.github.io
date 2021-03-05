@@ -22,7 +22,7 @@ class _HoursBuilderState extends State<HoursBuilder> {
       appBar: AppBar(title: Text("Materie")
       ),
       body: Padding(
-        padding: const EdgeInsets.all(32),
+        padding: const EdgeInsets.all(8),
         child: SingleChildScrollView(
           child: Stack(
             children: [
@@ -71,7 +71,7 @@ class _HoursBuilderState extends State<HoursBuilder> {
           backgroundColor: Colors.blue,
         ),
         child: Text("Termina", style: TextStyle(color: Colors.white),),
-        onPressed: () {
+        onPressed: () async {
           Navigator.push(context,
               MaterialPageRoute(
                   builder: (context) => TimeTable(lessons: lessons)
