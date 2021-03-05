@@ -39,9 +39,6 @@ class _TimeTableState extends State<TimeTable> {
     10 : "17:30/18:30"
   };
 
-
-
-
   @override
   void initState() {
     for (int i = 0; i < widget.lessons.length; i++) {
