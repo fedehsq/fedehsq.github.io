@@ -254,7 +254,6 @@
         .appBackground {
             background-color: rgba(255,255,255,0.8);
             background-blend-mode: lighten;
-            background-image: url(../images/mobile.svg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 50%;
