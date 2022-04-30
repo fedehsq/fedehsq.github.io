@@ -2,10 +2,12 @@
 <html lang="it">
 <meta charset="utf-8">
 <title>Federico Bernacca</title>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -13,29 +15,29 @@
     <link rel="stylesheet" href="css/top-navigation-bar.css">
     <link rel="stylesheet" href="css/sidebar.css">
 
-     <!-- JS functions -->
+    <!-- JS functions -->
 
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     <script>
-         
-        $(document).ready(function(){
-/*
-            var textToDisplay = "Mi chiamo Federico Bernacca e sono nato a Carrara l'8 Febbraio 1996. \n Fin da piccolo sono stato appassionato di informatica, ragion per cui, ottenuto il diploma superiore, ho deciso di iscrivermi al Corso di Laurea in Informatica a Pisa. \n Ho qui scoperto la programmazione, un mondo a me completamente sconosciuto fino a quel momento, che mi ha subito conquistato. Mi è nata una passione irrefrenabile verso questa disciplina, grazie alla quale, dopo non pochi sforzi, ho conseguito la laurea triennale. \n Al momento sono iscritto al corso di Laurea Magistrale in Cybersecurity a Pisa.";
-            $output = $('.aboutMeText > p:eq(0)');
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
 
-            var displayInt;
-            textToDisplay = textToDisplay.split(' ');
-            $output.empty();
-            displayInt = setInterval(function() {
-                var word = textToDisplay.shift();
-                if (word == null) { return clearInterval(displayInt); }
-                if (word == '\n') {
-                    $output.append("<br>");
-                } else {
-                    $output.append(word + ' ');
-                }
-            }, 50);
-          */
+        $(document).ready(function () {
+            /*
+                        var textToDisplay = "Mi chiamo Federico Bernacca e sono nato a Carrara l'8 Febbraio 1996. \n Fin da piccolo sono stato appassionato di informatica, ragion per cui, ottenuto il diploma superiore, ho deciso di iscrivermi al Corso di Laurea in Informatica a Pisa. \n Ho qui scoperto la programmazione, un mondo a me completamente sconosciuto fino a quel momento, che mi ha subito conquistato. Mi è nata una passione irrefrenabile verso questa disciplina, grazie alla quale, dopo non pochi sforzi, ho conseguito la laurea triennale. \n Al momento sono iscritto al corso di Laurea Magistrale in Cybersecurity a Pisa.";
+                        $output = $('.aboutMeText > p:eq(0)');
+            
+                        var displayInt;
+                        textToDisplay = textToDisplay.split(' ');
+                        $output.empty();
+                        displayInt = setInterval(function() {
+                            var word = textToDisplay.shift();
+                            if (word == null) { return clearInterval(displayInt); }
+                            if (word == '\n') {
+                                $output.append("<br>");
+                            } else {
+                                $output.append(word + ' ');
+                            }
+                        }, 50);
+                      */
             var width = $(window).width();
             if (width >= 767) {
                 $("#bar").show();
@@ -44,8 +46,8 @@
                 $("#bar").hide();
             }
         });
- 
-         function onResize() {
+
+        function onResize() {
             if (window.outerWidth >= 767) {
                 document.getElementById("menu").style.display = 'none';
                 document.getElementById("bar").style.display = 'block';
@@ -53,55 +55,56 @@
                 document.getElementById("menu").style.display = 'block';
                 document.getElementById("bar").style.display = 'none';
             }
-         
-         }
- 
-         function onClickListner(id) {
-             if (id == "cvButton") {
-                 var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-                 if (/android/i.test(userAgent)) {
-                     window.open("https://github.com/fedehsq/fedehsq.github.io/raw/master/curriculum.pdf", '_blank');
-                 } else {
-                     window.open("https://drive.google.com/uc?export=view&id=170282DkJ2bx5_AaICEPZA9WYcCWqBlPo", '_blank');
-                 }
-             } else if (id == "igIcon") {
-                 window.open("https://www.instagram.com/fedehsq/", '_blank');
-             }
-         }
 
-         function showIndex() {
-             if (document.getElementById("bar").style.display == 'block') {
+        }
+
+        function onClickListner(id) {
+            if (id == "cvButton") {
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                if (/android/i.test(userAgent)) {
+                    window.open("https://github.com/fedehsq/fedehsq.github.io/raw/master/curriculum.pdf", '_blank');
+                } else {
+                    window.open("https://drive.google.com/uc?export=view&id=170282DkJ2bx5_AaICEPZA9WYcCWqBlPo", '_blank');
+                }
+            } else if (id == "igIcon") {
+                window.open("https://www.instagram.com/fedehsq/", '_blank');
+            }
+        }
+
+        function showIndex() {
+            if (document.getElementById("bar").style.display == 'block') {
                 document.getElementById("bar").style.display = 'none';
-             } else {
-                
-                 document.getElementById("bar").style.display = 'block';
-             }
+            } else {
 
-         }
+                document.getElementById("bar").style.display = 'block';
+            }
 
-         function openNav() {
+        }
+
+        function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
         }
 
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
-     </script>
+    </script>
 
 </head>
+
 <body onresize="onResize()" style="background: black; color: white;">
     <!-- Top navigation -->
-    <div class="topnav" id ="bar">
+    <div class="topnav" id="bar">
 
         <!-- Centered link -->
         <div class="topnav-centered">
             <a href="#project">Progetti</a>
         </div>
-    
+
         <!-- Left-aligned links (default) -->
-        <a href="#services">Servizi</a>
         <a href="#timetable">Timetable</a>
-        
+        <a href="#MIB">MIB</a>
+
         <!-- Right-aligned links -->
         <div class="topnav-right">
             <a href="#studies">Istruzione</a>
@@ -116,149 +119,228 @@
                 <a href="#project" onclick="closeNav()">Progetti</a>
                 <a href="#services" onclick="closeNav()">Servizi</a>
                 <a href="#timetable" onclick="closeNav()">Timetable</a>
+                <a href="#MIB" onclick="closeNav()">MIB</a>
                 <a href="#studies" onclick="closeNav()">Istruzione</a>
                 <a href="#contact" onclick="closeNav()">Contatti</a>
-              </div>
-            <center> <img id ="menu" src="images/menu.svg" width="32px" onclick="openNav()"></center>
+            </div>
+            <center> <img id="menu" src="images/menu.svg" width="32px" onclick="openNav()"></center>
             <h1>Federico Bernacca</h1>
         </div>
         <div class="aboutMeText">
             <p>
-            Fin da piccolo sono stato appassionato di informatica, ragion per cui, ottenuto il diploma superiore, ho deciso di iscrivermi al Corso di Laurea in Informatica a Pisa. <br>
-            Ho qui scoperto la programmazione, un mondo a me completamente sconosciuto fino a quel momento, che mi ha subito conquistato. Mi è nata una passione irrefrenabile verso questa disciplina, grazie alla quale, dopo non pochi sforzi, ho conseguito la laurea triennale. <br>
-            Al momento sono iscritto al corso di Laurea Magistrale in Cybersecurity a Pisa. <br><br>  
+                Fin da piccolo sono stato appassionato di informatica, ragion per cui, ottenuto il diploma superiore, ho
+                deciso di iscrivermi al Corso di Laurea in Informatica a Pisa. <br>
+                Ho qui scoperto la programmazione, un mondo a me completamente sconosciuto fino a quel momento, che mi
+                ha subito conquistato. Mi è nata una passione irrefrenabile verso questa disciplina, grazie alla quale,
+                dopo non pochi sforzi, ho conseguito la laurea triennale. <br>
+                Al momento sono iscritto al corso di Laurea Magistrale in Cybersecurity a Pisa. <br><br>
             </p>
-            <button class="button" id="cvButton" onclick="onClickListner(this.id)" style="vertical-align:middle" ><span>Curriculum</span></button>
+            <button class="button" id="cvButton" onclick="onClickListner(this.id)"
+                style="vertical-align:middle"><span>Curriculum</span></button>
         </div>
     </div>
     <div class="secondContainer">
         <div class="blackText">
-            <p id = "studies">
+            <p id="studies">
                 <br>
-                <h2>Istruzione</h2>
-                <ul>
-                    <li>Diplomato al Liceo Linguistico IIS M.Montessori - E. Repetti, Carrara</li>
-                    <li>Laureato in Informatica, Pisa</li>
-                    <li>Studente magistrale in M.Sc. Cybersecurity, Pisa</li>
-                </ul> <br>
-            </p> 
-            <p id = "services">
-                <h2>Servizi</h2>
-                Nel corso degli anni universitari ho affinato diverse tecniche di programmazione che mi hanno portato ad avere una buona padronanza di diversi linguaggi di programmazione. <br>
-                In particolar modo mi sono specializzato nella relizzazione di applicazioni mobili, motivo per cui sono disponibile per l'ideazione, progettazione e sviluppo di queste. <br>
-                Ho anche le capacità per realizzare programmi desktop e semplici siti web. <br>
-                </p><br><br>
-                <center> <img src="images/codethinking.svg" style="width:50%;"> </center>
+            <h2>Istruzione</h2>
+            <ul>
+                <li>Diplomato al Liceo Linguistico IIS M.Montessori - E. Repetti, Carrara</li>
+                <li>Laureato in Informatica, Pisa</li>
+                <li>Studente magistrale in M.Sc. Cybersecurity, Pisa</li>
+            </ul> <br>
+            </p>
+            <p id="services">
+            <h2>Servizi</h2>
+            Nel corso degli anni universitari ho affinato diverse tecniche di programmazione che mi hanno portato ad
+            avere una buona padronanza di diversi linguaggi di programmazione. <br>
+            In particolar modo mi sono specializzato nella relizzazione di applicazioni mobili, motivo per cui sono
+            disponibile per l'ideazione, progettazione e sviluppo di queste. <br>
+            Ho anche le capacità per realizzare programmi desktop e semplici siti web. <br>
+            </p><br><br>
+            <center> <img src="images/codethinking.svg" style="width:50%;"> </center>
             </p>
             <br>
             <div class="appBackground">
-                <p id = "project">
-                    <h2>I miei progetti</h2>
-                    Il codice sorgente di molti applicativi da me sviluppati è disponibile sulla mia pagina github: <a href="https://github.com/fedehsq";>github.com/fedehsq</a><br>
-                    Di seguito illustro alcuni dei miei progetti. 
-                    <br>
-                    <p id = "mobileApp">
-                        <h3>Applicazioni mobili</h3>
-                        <b><a href = "https://github.com/Unipisa/HaloFarms_App";>HaloFarms_App</a></b> 
-                        <div class="codeText"> [Android, Java]</div> 
-                        HaloFarMs è un progetto internazionale che coinvolge diversi paesi dell'area del Mediterraneo. Mira a contribuire in modo significativo all’ottimizzazione di sistemi agricoli e sistemi produttivi innovativi e sostenibili nella regione del Mediterraneo. <a href="https://www.agr.unipi.it/halofarms";>
-                        HaloFarMs</a></li><br>
-                        Gli obbiettivi di HaloFarMs saranno raggiunti sviluppando innovazioni a diversi livelli, una di queste innovazioni è l'app da me ideata e sviluppata durante il tirocinio presso il Dipartimento di Informatica dell'Università di Pisa in collaborazione con quello di Agraria. <br>
-                        L'obbiettivo è stato quello di creare un'applicazione Android che assista il coltivatore durante la coltivazione; le specifiche sono state le seguenti. <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nell'ambito di un progetto in corso di svolgimento presso il Dipartimento di Agraria si sta studiando come utilizzare piante alofite (che abbassano il contenuto di sale nel terreno) per consentire le coltivazioni orticole anche in terreni salini. L'idea è di studiare possibili abbinamenti di alofite e altre piante che rendano la coltivazione possibile. Per fare questo è necessario partire da una misurazione del livello di salinità del terreno che consenta di valutare quale strategia di utilizzo delle piante alofite possa essere più efficace.<br>
-                        Per supportare l'agricoltore in queste misurazioni e durante la coltivazione, l'idea è stata quella di realizzare una app Android che consenta di:
-                        <ol>
-                            <li>Identificare il perimetro dell'area da coltivare, utilizzando il GPS.</li>
-                            <li>Determinare i punti in cui effettuare campionamenti di terreno per testarne la salinità (assistendo anche il coltivatore nell'etichettatura dei campioni).</li>
-                            <li>Sulla base dei risultati delle analisi di salinità, mostrare una heat map del terreno per suggerire la metodologia di coltivazione più adatta per ogni area.</li>
-                            <li>Mantenere uno storico dei risultati delle analisi di salinità in un database online.</li>
-                        </ol>
-                        <br>
+                <p id="project">
+                <h2>I miei progetti</h2>
+                Il codice sorgente di molti applicativi da me sviluppati è disponibile sulla mia pagina github: <a
+                    href="https://github.com/fedehsq" ;>github.com/fedehsq</a><br>
+                Di seguito illustro alcuni dei miei progetti.
+                <br>
+                <p id="mobileApp">
+                <h3>Applicazioni mobili</h3>
+                <b><a href="https://github.com/Unipisa/HaloFarms_App" ;>HaloFarms_App</a></b>
+                <div class="codeText"> [Android, Java]</div>
+                HaloFarMs è un progetto internazionale che coinvolge diversi paesi dell'area del Mediterraneo. Mira a
+                contribuire in modo significativo all’ottimizzazione di sistemi agricoli e sistemi produttivi innovativi
+                e sostenibili nella regione del Mediterraneo. <a href="https://www.agr.unipi.it/halofarms" ;>
+                    HaloFarMs</a></li><br>
+                Gli obbiettivi di HaloFarMs saranno raggiunti sviluppando innovazioni a diversi livelli, una di queste
+                innovazioni è l'app da me ideata e sviluppata durante il tirocinio presso il Dipartimento di Informatica
+                dell'Università di Pisa in collaborazione con quello di Agraria. <br>
+                L'obbiettivo è stato quello di creare un'applicazione Android che assista il coltivatore durante la
+                coltivazione; le specifiche sono state le seguenti. <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nell'ambito di un progetto in corso di svolgimento presso il Dipartimento
+                di Agraria si sta studiando come utilizzare piante alofite (che abbassano il contenuto di sale nel
+                terreno) per consentire le coltivazioni orticole anche in terreni salini. L'idea è di studiare possibili
+                abbinamenti di alofite e altre piante che rendano la coltivazione possibile. Per fare questo è
+                necessario partire da una misurazione del livello di salinità del terreno che consenta di valutare quale
+                strategia di utilizzo delle piante alofite possa essere più efficace.<br>
+                Per supportare l'agricoltore in queste misurazioni e durante la coltivazione, l'idea è stata quella di
+                realizzare una app Android che consenta di:
+                <ol>
+                    <li>Identificare il perimetro dell'area da coltivare, utilizzando il GPS.</li>
+                    <li>Determinare i punti in cui effettuare campionamenti di terreno per testarne la salinità
+                        (assistendo anche il coltivatore nell'etichettatura dei campioni).</li>
+                    <li>Sulla base dei risultati delle analisi di salinità, mostrare una heat map del terreno per
+                        suggerire la metodologia di coltivazione più adatta per ogni area.</li>
+                    <li>Mantenere uno storico dei risultati delle analisi di salinità in un database online.</li>
+                </ol>
+                Di seguito una demo dell'applicazione: <br>
+                <img src="https://raw.githubusercontent.com/Unipisa/HaloFarms_App/main/demo.gif" style="width:100%;">
+                <br>
+                <br>
+                <br>
+                <br>
 
-                        <b><a href = "https://github.com/fedehsq/WarehouseManagement";>WarehouseManagement</b></a>
-                        <div class="codeText"> [Flutter, Dart]</div>  
-                        Lo scopo dell'app è quello di permettere una gestione efficiente del magazzino del reparto U.S.S.D. Radiologia Interventistica dell'Ospedale Apuane (NOA). 
-                        <!--
+                <b><a href="https://github.com/fedehsq/WhatsApp_clone" ;>WhatsApp_clone</b></a>
+                <div class="codeText"> [Flutter, Dart, JavaScript, Node.js]</div>
+                Una replica di WhatsApp che ne emula le principali funzionalità. <br>
+                Il client è stato implementato utilizzando Flutter. <br>
+                Il server è stato implementato utilizzando Node.js. <br>
+                <div class="row">
+                    <div class="col">
+                        <img src="https://raw.githubusercontent.com/fedehsq/WhatsApp_clone/master/screens/welcome_clone.png" style="width:100%;">
+                    </div>
+                    <div class="col">
+                        <img src="https://raw.githubusercontent.com/fedehsq/WhatsApp_clone/master/screens/welcome_real.png" style="width:100%;">
+                    </div>                
+                    <div class="col">
+                        <img src="https://raw.githubusercontent.com/fedehsq/WhatsApp_clone/master/screens/chat_clone_mi8.png" style="width:100%;">
+                    </div>
+                    <div class="col">
+                        <img src="https://raw.githubusercontent.com/fedehsq/WhatsApp_clone/master/screens/chat_clone_iphonex.png" style="width:100%;">
+                    </div>
+
+                </div>
+
+                <br>
+                <br>
+                <b><a href="https://github.com/fedehsq/WarehouseManagement" ;>WarehouseManagement</b></a>
+                <div class="codeText"> [Flutter, Dart]</div>
+                Lo scopo dell'app è quello di permettere una gestione efficiente del magazzino del reparto U.S.S.D.
+                Radiologia Interventistica dell'Ospedale Apuane (NOA).
+                <!--
                             L'utente quando apre l'applicazione ha la possibilità di scegliere quale magazzino visualizzare, all'interno di questa pagina avrà a disposizione tutti gli oggetti di quel magazzino, con relativa foto, descrizione e quantità.
                         Ha inoltre la possibilità di marcare un oggetto come non disponibile, la possibilità di inserire quanti ne sono ancora rimanenti, ecc. 
                         Ogni modifica del magazzino viene sincronizzata su un documento Google in comune a tutti i possessori dell'app.   
                         -->
-                        <br> <br>
-                        <b><a href = "https://github.com/fedehsq/ordy";>ordy</b></a> <img src="gif/new.gif" style="width:5%;">
-                        <div class="codeText"> [Flutter, Dart]</div> 
-                        Applicazione mobile sviluppata utilizzando Flutter, progettata per essere utilizzata nei ristoranti per la gestione degli ordini del tavolo. <br>
-                        In particolare, sono presenti le seguenti funzionalità:
-                        <ol>
-                            <li>Aggiungere/rimuovere tavoli e piatti.</li>
-                            <li>Contrassegnare un tavolo come prenotato.</li>
-                            <li>Per ogni piatto aggiunto/rimosso il conto viene aggiornato in tempo reale.</li>
-                            <li>La feauture più interessante è la possibilità di collegare il telefono ad una stampante via Wi-Fi per stampare uno scontrino non fiscale del tavolo in questione.</li>
-                        </ol>
-                         <br>
-                        <b><a href = "https://github.com/fedehsq/instagram_clone";>instagram_clone</b></a> 
-                        <div class="codeText"> [Flutter, Dart]</div> 
-                        L'applicazione riproduce la pagina del profilo personale di Instagram, utilizzando le immagini presenti nella memoria interna del telefono. <br> <br>
-                        <b><a href = "https://github.com/fedehsq/management";>Management</b></a> 
-                        <div class="codeText"> [Android, Java]</div> 
-                        Una semplice app in stile Material Design per la gestione delle società di camion di gas. I dati vengono archiviati utilizzando Room database. <br>
-                        <br> <br>
-                    </p>
+                <br> <br>
+                <b><a href="https://github.com/fedehsq/ordy" ;>ordy</b></a>
+                <div class="codeText"> [Flutter, Dart]</div>
+                Applicazione mobile sviluppata utilizzando Flutter, progettata per essere utilizzata nei ristoranti per
+                la gestione degli ordini del tavolo. <br>
+                In particolare, sono presenti le seguenti funzionalità:
+                <ol>
+                    <li>Aggiungere/rimuovere tavoli e piatti.</li>
+                    <li>Contrassegnare un tavolo come prenotato.</li>
+                    <li>Per ogni piatto aggiunto/rimosso il conto viene aggiornato in tempo reale.</li>
+                    <li>La feauture più interessante è la possibilità di collegare il telefono ad una stampante via
+                        Wi-Fi per stampare uno scontrino non fiscale del tavolo in questione.</li>
+                </ol>
+                <br>
+                <b><a href="https://github.com/fedehsq/instagram_clone" ;>instagram_clone</b></a>
+                <div class="codeText"> [Flutter, Dart]</div>
+                L'applicazione riproduce la pagina del profilo personale di Instagram, utilizzando le immagini presenti
+                nella memoria interna del telefono. <br> <br>
+                <b><a href="https://github.com/fedehsq/management" ;>Management</b></a>
+                <div class="codeText"> [Android, Java]</div>
+                Una semplice app in stile Material Design per la gestione delle società di camion di gas. I dati vengono
+                archiviati utilizzando Room database. <br>
+                <br> <br>
+                </p>
                 </p>
             </div>
             <div class="desktopBackground">
-                <p id = "desktopApp">
-                    <h3>Applicazioni desktop</h3>
-                    <b><a href = "https://github.com/fedehsq/openssl_chatty";>openssl_chatty</a></b> <img src="gif/new.gif" style="width:5%;">
+                <p id="desktopApp">
+                <h3>Applicazioni desktop</h3>
+                <b><a href="https://github.com/fedehsq/openssl_chatty" ;>openssl_chatty</a></b>
 
-                    <div class="codeText"> [C++]</div> 
-                    Il progetto consiste nell’implementazione di una applicazione client-server multithread che realizzi un servizio di messagistica istantanea. <br>
-                    La peculiarità dell'applicazione è che tutte le comunicazioni tra client e server, e tra i vari peer, sono crittografate. <br>
-                    Le funzionalità crittografiche sono state realizzate utilizzando la libreria <b>OpenSSL</b>.
-                    <br><br>
-                    <b><a href = "https://github.com/fedehsq/WordQuizzle";>WordQuizzle</a></b> 
-                    <div class="codeText"> [Java]</div> 
-                    Il progetto consiste nell’implementazione di un sistema di sfide di traduzione italiano-inglese tra utenti registrati al servizio. <br>
-                    Gli utenti registrati possono sfidare i propri amici ad una gara il cui scopo è quello di tradurre in inglese il maggiore numero di parole italiane proposte dal servizio. <br>
-                    Il sistema consente inoltre la gestione di una rete sociale tra gli utenti iscritti. L’applicazione è implementata secondo una architettura client server. <br><br>
-                    <b><a href = "https://github.com/fedehsq/ObjectStore";>ObjectStore</a></b> 
-                    <div class="codeText"> [C]</div> 
-                    Il progetto consiste nel realizzare un object store implementato come sistema client-server, e destinato a supportare le richieste di memorizzare e recuperare blocchi di dati da parte di un gran numero di applicazioni. <br>
-                    La connessione fra clienti e object store avviene attraverso socket su dominio locale. In particolare, sarà necessario implementare:
-                    <ol>
-                        <li>La parte server (object store) come eseguibile autonomo.</li>
-                        <li>Una libreria destinata a essere incorporata nei client che si interfacci con l'object store usando il protocollo definito nelle specifiche.</li>
-                        <li>Un client di esempio che usi la libreria per testare il funzionamento del sistema.</li>
-                    </ol>
-                    <br>
+                <div class="codeText"> [C++]</div>
+                Il progetto consiste nell’implementazione di una applicazione client-server multithread che realizzi un
+                servizio di messagistica istantanea. <br>
+                La peculiarità dell'applicazione è che tutte le comunicazioni tra client e server, e tra i vari peer,
+                sono crittografate. <br>
+                Le funzionalità crittografiche sono state realizzate utilizzando la libreria <b>OpenSSL</b>.
+                <br><br>
+                <b><a href="https://github.com/fedehsq/WordQuizzle" ;>WordQuizzle</a></b>
+                <div class="codeText"> [Java]</div>
+                Il progetto consiste nell’implementazione di un sistema di sfide di traduzione italiano-inglese tra
+                utenti registrati al servizio. <br>
+                Gli utenti registrati possono sfidare i propri amici ad una gara il cui scopo è quello di tradurre in
+                inglese il maggiore numero di parole italiane proposte dal servizio. <br>
+                Il sistema consente inoltre la gestione di una rete sociale tra gli utenti iscritti. L’applicazione è
+                implementata secondo una architettura client server. <br><br>
+                <b><a href="https://github.com/fedehsq/ObjectStore" ;>ObjectStore</a></b>
+                <div class="codeText"> [C]</div>
+                Il progetto consiste nel realizzare un object store implementato come sistema client-server, e destinato
+                a supportare le richieste di memorizzare e recuperare blocchi di dati da parte di un gran numero di
+                applicazioni. <br>
+                La connessione fra clienti e object store avviene attraverso socket su dominio locale. In particolare,
+                sarà necessario implementare:
+                <ol>
+                    <li>La parte server (object store) come eseguibile autonomo.</li>
+                    <li>Una libreria destinata a essere incorporata nei client che si interfacci con l'object store
+                        usando il protocollo definito nelle specifiche.</li>
+                    <li>Un client di esempio che usi la libreria per testare il funzionamento del sistema.</li>
+                </ol>
+                <br>
                 </p>
             </div>
 
             <div class="websiteBackground">
                 <p id="web">
-                    <h3>Web</h3>
-                    <b><a href = "https://github.com/fedehsq/fedehsq.github.io";>fedehsq.github.io</a></b> <div class="codeText"> [HTML, CSS, JavaScript]</div> 
-                    Dove ti trovi adesso, il mio primo sito web. <br> <br>
+                <h3>Web</h3>
 
-                       <b><a href = "https://github.com/fedehsq/fedehsq.github.io/tree/master/timetable"; id = "timetable">timetable</a></b> <div class="codeText"> [Flutter, Dart]</div> 
-                    Sei uno studente? <b><a href = "https://fedehsq.github.io/timetable";>Questa web app</a></b> potrebbe aiutarti a gestire gli orari delle tue lezioni. 
-                 
-                    
-                    <br> 
-                    <br>
-                    <br> 
+
+                <b><a href="https://github.com/fedehsq/micro_mib" id="MIB";>message_in_a_bottle</a></b>
+                <div class="codeText"> [Python, HTML, CSS, JavaScript]</div>
+                Applicazione web realizzata con il framework <a href="https://flask.palletsprojects.com/en/2.1.x/" ;>Flask</a> come un'architettura a microservizi e configurata tramite <a href="https://www.docker.com/" ;>Docker</a>. <br>
+                Lo scopo dell'applicazione è quello di fornire una piattaforma per l'invio di messaggi in una specifica data, con l'impossibilità di cancellare la schedulazione. <br>
+                Una demo in versione monolite è disponibile al seguente indirizzo: <a href="https://my-message-in-a-bottle.herokuapp.com/login" ;>Message in a bottle</a> <br>
+
+                <br>
+
+                <b><a href="https://github.com/fedehsq/fedehsq.github.io" ;>fedehsq.github.io</a></b>
+                <div class="codeText"> [HTML, CSS, JavaScript]</div>
+                Dove ti trovi adesso, il mio primo sito web. <br> <br>
+
+                <b><a href="https://github.com/fedehsq/fedehsq.github.io/tree/master/timetable" ;
+                        id="timetable">timetable</a></b>
+                <div class="codeText"> [Flutter, Dart]</div>
+                Sei uno studente? <b><a href="https://fedehsq.github.io/timetable" ;>Questa web app</a></b> potrebbe
+                aiutarti a gestire gli orari delle tue lezioni.
+
+
+                <br>
+                <br>
+                <br>
                 </p>
             </div>
         </div>
     </div>
-    <div class="whiteText"> 
-        <p id = "contact">
-            <h2>Contatti</h2>
-            <a href="mailto:fedebernacca@gmail.com" style="color: #4678d6">fedebernacca@gmail.com</a> <br> <br>
-            <img src="icons/instagram.png" id="igIcon" onmouseover = "className = 'hover'" onclick = "onClickListner(this.id)" style="width: 30px;">
-            <br>
-            <br>
+    <div class="whiteText">
+        <p id="contact">
+        <h2>Contatti</h2>
+        <a href="mailto:fedebernacca@gmail.com" style="color: #4678d6">fedebernacca@gmail.com</a> <br> <br>
+        <img src="icons/instagram.png" id="igIcon" onmouseover="className = 'hover'" onclick="onClickListner(this.id)"
+            style="width: 30px;">
+        <br>
+        <br>
         </p>
 
-       
-    </body>
+
+</body>
+
 </html>
