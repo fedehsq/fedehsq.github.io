@@ -60,12 +60,14 @@
 
         function onClickListner(id) {
             if (id == "cvButton") {
-                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-                if (/android/i.test(userAgent)) {
-                    window.open("https://github.com/fedehsq/fedehsq.github.io/raw/master/curriculum.pdf", '_blank');
-                } else {
-                    window.open("https://drive.google.com/uc?export=view&id=170282DkJ2bx5_AaICEPZA9WYcCWqBlPo", '_blank');
-                }
+                window.open("./curriculum.pdf", '_blank');
+                //window.open("https://github.com/fedehsq/fedehsq.github.io/raw/master/curriculum.pdf", '_blank');
+                //var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                //if (/android/i.test(userAgent)) {
+                //    window.open("https://github.com/fedehsq/fedehsq.github.io/raw/master/curriculum.pdf", '_blank');
+                //} else {
+                //    window.open("https://drive.google.com/uc?export=view&id=170282DkJ2bx5_AaICEPZA9WYcCWqBlPo", '_blank');
+                //}
             } else if (id == "igIcon") {
                 window.open("https://www.instagram.com/fedehsq/", '_blank');
             }
@@ -103,7 +105,7 @@
 
         <!-- Left-aligned links (default) -->
         <a href="#timetable">Timetable</a>
-        <a href="#MIB">MIB</a>
+        <a href="#tesi">Tesi</a>
 
         <!-- Right-aligned links -->
         <div class="topnav-right">
@@ -132,8 +134,8 @@
                 deciso di iscrivermi al Corso di Laurea in Informatica a Pisa. <br>
                 Ho qui scoperto la programmazione, un mondo a me completamente sconosciuto fino a quel momento, che mi
                 ha subito conquistato. Mi è nata una passione irrefrenabile verso questa disciplina, grazie alla quale,
-                dopo non pochi sforzi, ho conseguito la laurea triennale. <br>
-                Al momento sono iscritto al corso di Laurea Magistrale in Cybersecurity a Pisa. <br><br>
+                ho conseguito la laurea triennale. <br>
+                Ad Aprile 2023 ho anche conseguito la Laurea Magistrale in Cybersecurity a Pisa. <br><br>
             </p>
             <button class="button" id="cvButton" onclick="onClickListner(this.id)"
                 style="vertical-align:middle"><span>Curriculum</span></button>
@@ -145,9 +147,9 @@
                 <br>
             <h2>Istruzione</h2>
             <ul>
-                <li>Diplomato al Liceo Linguistico IIS M.Montessori - E. Repetti, Carrara</li>
-                <li>Laureato in Informatica, Pisa</li>
-                <li>Studente magistrale in M.Sc. Cybersecurity, Pisa</li>
+                <li>Diploma di Liceo Linguistico IIS M.Montessori - E. Repetti, Carrara</li>
+                <li>Laurea in Informatica, Pisa</li>
+                <li>Laurea magistrale in M.Sc. Cybersecurity, Pisa</li>
             </ul> <br>
             </p>
             <p id="services">
@@ -168,6 +170,63 @@
                     href="https://github.com/fedehsq" ;>github.com/fedehsq</a><br>
                 Di seguito illustro alcuni dei miei progetti.
                 <br>
+                <p id="tesi">
+                <h3>Tesi</h3>
+                <br>
+                <b><a href="https://github.com/fedehsq/vault-auth-plugin" ;>vault-auth-plugin</a></b> <span style="font-size: 12px;">(magistrale)</span>
+                <div class="codeText"> [Go, Shell, HCL]</div>
+                La crescente automazione nei processi IT e l'evoluzione dei processi del ciclo di vita del software in
+                ottica DevOps, hanno comportato una sempre minor necessità di effettuare l'accesso diretto ai sistemi
+                informatici: tipicamente l'accesso avviene al fine di eseguire operazioni critiche e di manutenzione
+                straordinario. <br>
+                L'accesso a tali sistemi pertanto dovrebbe essere il più possibile limitato e soggetto ad
+                un rigoroso monitoraggio degli accessi effettuati. A tale scopo risulta utile definire un punto unico di
+                accesso su cui concentrare le verifiche di sicurezza: un sistema di questo tipo viene definito
+                tipicamente come bastion host. <br>
+                Altro punto critico nell'accesso ai sistemi è la protezione delle chiavi
+                di accesso: queste in ambito enterprise sono gestite nella maniera più disparata, a volte senza alcun
+                uso di misure protettive, altre con sistemi sempre più sofisticati come vault o HSM.
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scopo del progetto di tesi è l'implementazione di un sistema basato su bastion host, che mediante
+                l'implementazione di un workflow autorizzativo, permetta di garantire o negare l'accesso a sistemi
+                remoti mediante l'uso automatico di chiavi recuperate da un vault da parte di un bastion host. <br>
+                
+                <br>
+                <br>
+                <b><a href="https://github.com/Unipisa/HaloFarms_App" ;>HaloFarms_App</a></b> <span style="font-size: 12px;">(triennale)</span>
+                <div class="codeText"> [Android, Java]</div>
+                <a href="https://www.agr.unipi.it/halofarms">HaloFarMs</a> è un progetto internazionale che coinvolge
+                diversi paesi dell'area del Mediterraneo.
+                Mira a
+                contribuire in modo significativo all’ottimizzazione di sistemi agricoli e sistemi produttivi innovativi
+                e sostenibili nella regione del Mediterraneo.
+                Gli obbiettivi di HaloFarMs saranno raggiunti sviluppando innovazioni a diversi livelli, una di queste
+                innovazioni è l'app da me ideata e sviluppata durante il tirocinio presso il Dipartimento di Informatica
+                dell'Università di Pisa in collaborazione con quello di Agraria. <br>
+                L'obbiettivo è stato quello di creare un'applicazione Android che assista il coltivatore durante la
+                coltivazione; le specifiche sono state le seguenti. <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nell'ambito di un progetto in corso di svolgimento presso il Dipartimento
+                di Agraria si sta studiando come utilizzare piante alofite (che abbassano il contenuto di sale nel
+                terreno) per consentire le coltivazioni orticole anche in terreni salini. L'idea è di studiare possibili
+                abbinamenti di alofite e altre piante che rendano la coltivazione possibile. Per fare questo è
+                necessario partire da una misurazione del livello di salinità del terreno che consenta di valutare quale
+                strategia di utilizzo delle piante alofite possa essere più efficace.<br>
+                Per supportare l'agricoltore in queste misurazioni e durante la coltivazione, l'idea è stata quella di
+                realizzare una app Android che consenta di:
+                <ol>
+                    <li>Identificare il perimetro dell'area da coltivare, utilizzando il GPS.</li>
+                    <li>Determinare i punti in cui effettuare campionamenti di terreno per testarne la salinità
+                        (assistendo anche il coltivatore nell'etichettatura dei campioni).</li>
+                    <li>Sulla base dei risultati delle analisi di salinità, mostrare una heat map del terreno per
+                        suggerire la metodologia di coltivazione più adatta per ogni area.</li>
+                    <li>Mantenere uno storico dei risultati delle analisi di salinità in un database online.</li>
+                </ol>
+                Di seguito una demo dell'applicazione: <br>
+                <img src="https://raw.githubusercontent.com/Unipisa/HaloFarms_App/main/demo.gif"
+                    style="width:100%;margin-top:16px">
+                <br>
+                <br>
+                <br>
+
                 <p id="mobileApp">
                 <h3>Applicazioni mobili</h3>
                 <br>
@@ -176,7 +235,8 @@
                 <a
                     href='https://play.google.com/store/apps/details?id=com.fedeveloper.libretto&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
                         alt='Disponibile su Google Play'
-                        src='https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png' style="width: 185px;" /></a>
+                        src='https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png'
+                        style="width: 185px;" /></a>
                 <br>
                 L'idea è quella di offrire un'applicazione semplice ed intuitiva che permetta ad uno studente UniPi di
                 tenere sotto controllo efficientemente le
@@ -204,40 +264,6 @@
                         <img src="./images/libretto/5.png" style="width:100%;">
                     </div>
                 </div>
-                <br>
-                <br>
-                <br>
-
-                <b><a href="https://github.com/Unipisa/HaloFarms_App" ;>HaloFarms_App</a></b>
-                <div class="codeText"> [Android, Java]</div>
-                HaloFarMs è un progetto internazionale che coinvolge diversi paesi dell'area del Mediterraneo. Mira a
-                contribuire in modo significativo all’ottimizzazione di sistemi agricoli e sistemi produttivi innovativi
-                e sostenibili nella regione del Mediterraneo. <a href="https://www.agr.unipi.it/halofarms" ;>
-                    HaloFarMs</a></li><br>
-                Gli obbiettivi di HaloFarMs saranno raggiunti sviluppando innovazioni a diversi livelli, una di queste
-                innovazioni è l'app da me ideata e sviluppata durante il tirocinio presso il Dipartimento di Informatica
-                dell'Università di Pisa in collaborazione con quello di Agraria. <br>
-                L'obbiettivo è stato quello di creare un'applicazione Android che assista il coltivatore durante la
-                coltivazione; le specifiche sono state le seguenti. <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nell'ambito di un progetto in corso di svolgimento presso il Dipartimento
-                di Agraria si sta studiando come utilizzare piante alofite (che abbassano il contenuto di sale nel
-                terreno) per consentire le coltivazioni orticole anche in terreni salini. L'idea è di studiare possibili
-                abbinamenti di alofite e altre piante che rendano la coltivazione possibile. Per fare questo è
-                necessario partire da una misurazione del livello di salinità del terreno che consenta di valutare quale
-                strategia di utilizzo delle piante alofite possa essere più efficace.<br>
-                Per supportare l'agricoltore in queste misurazioni e durante la coltivazione, l'idea è stata quella di
-                realizzare una app Android che consenta di:
-                <ol>
-                    <li>Identificare il perimetro dell'area da coltivare, utilizzando il GPS.</li>
-                    <li>Determinare i punti in cui effettuare campionamenti di terreno per testarne la salinità
-                        (assistendo anche il coltivatore nell'etichettatura dei campioni).</li>
-                    <li>Sulla base dei risultati delle analisi di salinità, mostrare una heat map del terreno per
-                        suggerire la metodologia di coltivazione più adatta per ogni area.</li>
-                    <li>Mantenere uno storico dei risultati delle analisi di salinità in un database online.</li>
-                </ol>
-                Di seguito una demo dell'applicazione: <br>
-                <img src="https://raw.githubusercontent.com/Unipisa/HaloFarms_App/main/demo.gif"
-                    style="width:100%;margin-top:16px">
                 <br>
                 <br>
                 <br>
@@ -365,9 +391,6 @@
                     href="https://www.docker.com/" ;>Docker</a>. <br>
                 Lo scopo dell'applicazione è quello di fornire una piattaforma per l'invio di messaggi in una specifica
                 data, con l'impossibilità di cancellare la schedulazione. <br>
-                Una demo in versione monolite è disponibile al seguente indirizzo: <a
-                    href="https://my-message-in-a-bottle.herokuapp.com/login" ;>Message in a bottle</a> <br>
-
                 <br>
                 <br>
 
