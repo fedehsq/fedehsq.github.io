@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FollowGuard - Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            background: #fafafa;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 1rem;
+        }
+
+        .flag {
+            cursor: pointer;
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+        }
+
+        .content {
+            display: none;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FollowGuard - Privacy Policy</h1>
+
+    <div class="lang-switch">
+        <span class="flag" data-lang="en">🇬🇧</span>
+        <span class="flag" data-lang="it">🇮🇹</span>
+    </div>
+
+    <!-- English -->
+    <div id="en" class="content active">
+        <h2>Privacy Policy - FollowGuard</h2>
+        <p><strong>Last update: August 2025</strong></p>
+
+        <h3>1. Data Collection</h3>
+        <p>The App does <strong>not collect personal data</strong> such as name, email, or contact details. Only
+            technical data necessary for security, crash reporting, and subscription management is processed.</p>
+
+        <h3>2. Services Used</h3>
+        <ul>
+            <li><strong>freeRASP by Talsec</strong> - security checks against fraud, root/jailbreak detection, and app
+                integrity. Some diagnostic data may be sent to Talsec.</li>
+            <li><strong>Firebase (Core, App Check, Crashlytics)</strong> - used for app integrity verification, crash
+                reports, and protection against abuse.</li>
+            <li><strong>In-App Purchases (Google Play / App Store)</strong> - used to manage subscriptions. These
+                services may process your account data according to Google/Apple policies.</li>
+        </ul>
+
+        <h3>3. Purpose of Data Use</h3>
+        <ul>
+            <li>Ensure the security and integrity of the App.</li>
+            <li>Detect fraud and prevent unauthorized use.</li>
+            <li>Manage subscription status.</li>
+            <li>Improve stability and fix crashes.</li>
+        </ul>
+
+        <h3>4. Data Sharing</h3>
+        <p>Technical data may be shared with the above providers (Google, Apple, Talsec) for the purposes described. No
+            personal data is sold or shared with other third parties.</p>
+
+        <h3>5. User Rights</h3>
+        <p>User Rights
+            Since the App does not collect or store personal data, no action from the user is required. Any account or
+            subscription data is handled directly by Google or Apple according to their policies.</p>
+
+        <h3>6. Contact</h3>
+        <p>For any question, please contact:<br>
+            <strong>Federico Bernacca</strong><br>
+            📧 <a href="mailto:dev@federicobernacca.com">dev@federicobernacca.com</a>
+        </p>
+    </div>
+
+    <!-- Italiano -->
+    <div id="it" class="content">
+        <h2>Informativa sulla Privacy - FollowGuard</h2>
+        <p><strong>Ultimo aggiornamento: Agosto 2025</strong></p>
+
+        <h3>1. Raccolta dei dati</h3>
+        <p>L’App <strong>non raccoglie dati personali</strong> come nome, email o recapiti. Vengono trattati
+            esclusivamente dati tecnici necessari per la sicurezza, la gestione degli abbonamenti e la segnalazione di
+            crash.</p>
+
+        <h3>2. Servizi utilizzati</h3>
+        <ul>
+            <li><strong>freeRASP by Talsec</strong> - controlli di sicurezza contro frodi, rilevamento root/jailbreak e
+                integrità dell’app. Alcuni dati diagnostici possono essere inviati a Talsec.</li>
+            <li><strong>Firebase (Core, App Check, Crashlytics)</strong> - utilizzato per la verifica di integrità, i
+                report di crash e la protezione da abusi.</li>
+            <li><strong>Acquisti in-app (Google Play / App Store)</strong> - utilizzati per gestire gli abbonamenti.
+                Questi servizi possono trattare i dati del tuo account in base alle policy di Google/Apple.</li>
+        </ul>
+
+        <h3>3. Finalità del trattamento</h3>
+        <ul>
+            <li>Garantire la sicurezza e l’integrità dell’App.</li>
+            <li>Rilevare frodi e prevenire usi non autorizzati.</li>
+            <li>Gestire lo stato degli abbonamenti.</li>
+            <li>Migliorare la stabilità e correggere crash.</li>
+        </ul>
+
+        <h3>4. Condivisione dei dati</h3>
+        <p>I dati tecnici possono essere condivisi con i fornitori sopra elencati (Google, Apple, Talsec) per le
+            finalità indicate. Nessun dato personale viene venduto o condiviso con altre terze parti.</p>
+
+        <h3>5. Diritti degli utenti</h3>
+        <p>Poiché l’App non raccoglie né conserva dati personali, non è richiesta alcuna azione da parte dell’utente.
+            Eventuali dati relativi all’account o agli abbonamenti sono gestiti direttamente da Google o Apple secondo
+            le loro policy.</p>
+
+        <h3>6. Contatti</h3>
+        <p>Per qualsiasi richiesta puoi contattare:<br>
+            <strong>Federico Bernacca</strong><br>
+            📧 <a href="mailto:dev@federicobernacca.com">dev@federicobernacca.com</a>
+        </p>
+    </div>
+
+    <script>
+        const flags = document.querySelectorAll('.flag');
+        const contents = document.querySelectorAll('.content');
+
+        flags.forEach(flag => {
+            flag.addEventListener('click', () => {
+                const lang = flag.dataset.lang;
+                contents.forEach(c => c.classList.remove('active'));
+                document.getElementById(lang).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
