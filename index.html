@@ -1,463 +1,310 @@
 <!doctype html>
 <html lang="it">
-<meta charset="utf-8">
-<title>Federico Bernacca</title>
-
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/top-navigation-bar.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-
-    <!-- JS functions -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-
-        $(document).ready(function () {
-            /*
-                        var textToDisplay = "Mi chiamo Federico Bernacca e sono nato a Carrara l'8 Febbraio 1996. \n Fin da piccolo sono stato appassionato di informatica, ragion per cui, ottenuto il diploma superiore, ho deciso di iscrivermi al Corso di Laurea in Informatica a Pisa. \n Ho qui scoperto la programmazione, un mondo a me completamente sconosciuto fino a quel momento, che mi ha subito conquistato. Mi è nata una passione irrefrenabile verso questa disciplina, grazie alla quale, dopo non pochi sforzi, ho conseguito la laurea triennale. \n Al momento sono iscritto al corso di Laurea Magistrale in Cybersecurity a Pisa.";
-                        $output = $('.aboutMeText > p:eq(0)');
-            
-                        var displayInt;
-                        textToDisplay = textToDisplay.split(' ');
-                        $output.empty();
-                        displayInt = setInterval(function() {
-                            var word = textToDisplay.shift();
-                            if (word == null) { return clearInterval(displayInt); }
-                            if (word == '\n') {
-                                $output.append("<br>");
-                            } else {
-                                $output.append(word + ' ');
-                            }
-                        }, 50);
-                      */
-            var width = $(window).width();
-            if (width >= 767) {
-                $("#bar").show();
-                $("#menu").hide();
-            } else {
-                $("#bar").hide();
-            }
-        });
-
-        function onResize() {
-            if (window.outerWidth >= 767) {
-                document.getElementById("menu").style.display = 'none';
-                document.getElementById("bar").style.display = 'block';
-            } else {
-                document.getElementById("menu").style.display = 'block';
-                document.getElementById("bar").style.display = 'none';
-            }
-
-        }
-
-        function onClickListner(id) {
-            if (id == "cvButton") {
-                window.open("./curriculum.pdf", '_blank');
-                //window.open("https://github.com/fedehsq/fedehsq.github.io/raw/master/curriculum.pdf", '_blank');
-                //var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-                //if (/android/i.test(userAgent)) {
-                //    window.open("https://github.com/fedehsq/fedehsq.github.io/raw/master/curriculum.pdf", '_blank');
-                //} else {
-                //    window.open("https://drive.google.com/uc?export=view&id=170282DkJ2bx5_AaICEPZA9WYcCWqBlPo", '_blank');
-                //}
-            } else if (id == "igIcon") {
-                window.open("https://www.instagram.com/fedehsq/", '_blank');
-            }
-        }
-
-        function showIndex() {
-            if (document.getElementById("bar").style.display == 'block') {
-                document.getElementById("bar").style.display = 'none';
-            } else {
-
-                document.getElementById("bar").style.display = 'block';
-            }
-
-        }
-
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio di Federico Bernacca, fullstack engineer specializzato in mobile e cybersecurity.">
+  <title>Federico Bernacca</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Principale">
+      <a class="logo" href="#top">FB.</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+      <div class="nav-links" id="primary-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#articles">Articoli</a>
+        <a href="#projects">Progetti</a>
+        <a href="#experience">Esperienze</a>
+        <a href="#contact">Contatti</a>
+      </div>
+    </nav>
+  </header>
 
-<body onresize="onResize()" style="background: black; color: white;">
-    <!-- Top navigation -->
-    <div class="topnav" id="bar">
-
-        <!-- Centered link -->
-        <div class="topnav-centered">
-            <a href="#project">Progetti</a>
-        </div>
-
-        <!-- Left-aligned links (default) -->
-        <a href="#timetable">Timetable</a>
-        <a href="#tesi">Tesi</a>
-
-        <!-- Right-aligned links -->
-        <div class="topnav-right">
-            <a href="#studies">Istruzione</a>
-            <a href="#contact">Contatti</a>
-        </div>
-    </div>
-    <br>
-    <div class="firstContainer">
-        <div class="title">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#project" onclick="closeNav()">Progetti</a>
-                <a href="#services" onclick="closeNav()">Servizi</a>
-                <a href="#timetable" onclick="closeNav()">Timetable</a>
-                <a href="#MIB" onclick="closeNav()">MIB</a>
-                <a href="#studies" onclick="closeNav()">Istruzione</a>
-                <a href="#contact" onclick="closeNav()">Contatti</a>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow">Backend Engineer + Mobile Specialist + Cybersecurity Expert</p>
+          <h1 id="hero-title">Federico Bernacca</h1>
+          <p class="lead">
+            Ingegnere software con focus su backend robusti e applicazioni mobile affidabili.
+            Background in cybersecurity, con un approccio orientato al prodotto e alle performance.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="curriculum.pdf" target="_blank" rel="noreferrer">Scarica CV</a>
+            <a class="btn ghost" href="#projects">Vedi progetti</a>
+          </div>
+          <div class="hero-highlights">
+            <div>
+              <p class="label">Specializzazione</p>
+              <p class="value">Backend + Mobile + Cybersecurity</p>
             </div>
-            <center> <img id="menu" src="images/menu.svg" width="32px" onclick="openNav()"></center>
-            <h1>Federico Bernacca</h1>
+            <div>
+              <p class="label">Lauree</p>
+              <p class="value">BSc Informatica, MSc Cybersecurity</p>
+            </div>
+          </div>
         </div>
-        <div class="aboutMeText">
-            <p>
-                Fin da piccolo sono stato appassionato di informatica, ragion per cui, ottenuto il diploma superiore, ho
-                deciso di iscrivermi al Corso di Laurea in Informatica a Pisa. <br>
-                Ho qui scoperto la programmazione, un mondo a me completamente sconosciuto fino a quel momento, che mi
-                ha subito conquistato. Mi è nata una passione irrefrenabile verso questa disciplina, grazie alla quale,
-                ho conseguito la laurea triennale. <br>
-                Ad Aprile 2023 ho anche conseguito la Laurea Magistrale in Cybersecurity a Pisa. <br><br>
-            </p>
-            <button class="button" id="cvButton" onclick="onClickListner(this.id)"
-                style="vertical-align:middle"><span>Curriculum</span></button>
+        <div class="hero-visual" data-reveal style="--delay: 0.15s;">
+          <img src="images/programming.svg" alt="Illustrazione sviluppo software" loading="lazy">
+          <div class="hero-card">
+            <p class="label">Disponibile per</p>
+            <p class="value">Collaborazioni, consulenza, mentorship</p>
+          </div>
         </div>
-    </div>
-    <div class="secondContainer">
-        <div class="blackText">
-            <p id="studies">
-                <br>
-            <h2>Istruzione</h2>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <p class="section-label">About</p>
+          <h2>Un profilo tecnico con visione di prodotto</h2>
+        </div>
+        <div class="section-grid" data-reveal style="--delay: 0.1s;">
+          <p>
+            Nato a Carrara, <strong>laurea in Informatica</strong> e <strong>laurea magistrale in Cybersecurity</strong>
+            all'Universita di Pisa.
+            Dal 2023 lavoro in <a href="https://imolainformatica.it/">Imola Informatica</a> come IT Consultant e Software
+            Engineer, con focus su backend e sistemi affidabili.
+          </p>
+          <p>
+            Nel 2024 ho avviato l'attivita da libero professionista sviluppando app mobile in ambito medicale per
+            <a href="https://trusttis.com/">TrustTiS (TiS)</a>. Allineo business, UX e
+            engineering per costruire prodotti coerenti, performanti e facilmente manutenibili.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="skills">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <p class="section-label">Skills</p>
+          <h2>Stack essenziale, focus su qualità e delivery</h2>
+        </div>
+        <div class="badge-grid" data-reveal style="--delay: 0.1s;">
+          <span class="badge">Java</span>
+          <span class="badge">Spring</span>
+          <span class="badge">Quarkus</span>
+          <span class="badge">Flask</span>
+          <span class="badge">Python</span>
+          <span class="badge">Flutter</span>
+          <span class="badge">Android</span>
+          <span class="badge">Dart</span>
+          <span class="badge">Go</span>
+          <span class="badge">Docker</span>
+          <span class="badge">REST APIs</span>
+          <span class="badge">Security</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="experience">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <p class="section-label">Esperienze lavorative</p>
+          <h2>Impatto misurabile, responsabilità chiare</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item" data-reveal>
+            <div class="timeline-header">
+              <h3>IT Consultant & Software Engineer</h3>
+              <span class="meta"><a href="https://imolainformatica.it/">Imola Informatica</a> • 2023-oggi</span>
+            </div>
             <ul>
-                <li>Diploma di Liceo Linguistico IIS M.Montessori - E. Repetti, Carrara</li>
-                <li>Laurea in Informatica, Pisa</li>
-                <li>Laurea magistrale in M.Sc. Cybersecurity, Pisa</li>
-            </ul> <br>
-            </p>
-            <p id="services">
-            <h2>Servizi</h2>
-            Nel corso degli anni universitari ho affinato diverse tecniche di programmazione che mi hanno portato ad
-            avere una buona padronanza di diversi linguaggi di programmazione. <br>
-            In particolar modo mi sono specializzato nella relizzazione di applicazioni mobili, motivo per cui sono
-            disponibile per l'ideazione, progettazione e sviluppo di queste. <br>
-            Ho anche le capacità per realizzare applicazioni web, programmi desktop e siti web. <br>
-            </p><br><br>
-            <center> <img src="images/codethinking.svg" style="width:50%;"> </center>
-            </p>
-            <br>
-            <div class="appBackground">
-                <p id="project">
-                <h2>I miei progetti</h2>
-                Il codice sorgente di molti applicativi da me sviluppati è disponibile sulla mia pagina github: <a
-                    href="https://github.com/fedehsq" ;>github.com/fedehsq</a><br>
-                Di seguito illustro alcuni dei miei progetti.
-                <br>
-                <p id="tesi">
-                <h3>Tesi</h3>
-                <br>
-                <b><a href="https://github.com/fedehsq/vault-auth-plugin">Implementation of a controlled access system
-                        using Bastion Host and Vault
-                    </a></b> <span style="font-size: 12px;">(magistrale)</span>
-                <div class="codeText"> [Go, Shell, HCL]</div>
-                La crescente automazione nei processi IT e l'evoluzione dei processi del ciclo di vita del software in
-                ottica DevOps, hanno comportato una sempre minor necessità di effettuare l'accesso diretto ai sistemi
-                informatici: tipicamente l'accesso avviene al fine di eseguire operazioni critiche e di manutenzione
-                straordinario. <br>
-                L'accesso a tali sistemi pertanto dovrebbe essere il più possibile limitato e soggetto ad
-                un rigoroso monitoraggio degli accessi effettuati. A tale scopo risulta utile definire un punto unico di
-                accesso su cui concentrare le verifiche di sicurezza: un sistema di questo tipo viene definito
-                tipicamente come bastion host. <br>
-                Altro punto critico nell'accesso ai sistemi è la protezione delle chiavi
-                di accesso: queste in ambito enterprise sono gestite nella maniera più disparata, a volte senza alcun
-                uso di misure protettive, altre con sistemi sempre più sofisticati come vault o HSM. <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scopo del progetto di tesi è l'implementazione di un sistema basato su
-                bastion host, che mediante
-                l'implementazione di un workflow autorizzativo, permetta di garantire o negare l'accesso a sistemi
-                remoti mediante l'uso automatico di chiavi recuperate da un vault da parte di un bastion host. <br>
-
-                <br>
-                <br>
-                <b><a href="https://github.com/Unipisa/HaloFarms_App" ;>HaloFarms_App</a></b> <span
-                    style="font-size: 12px;">(triennale)</span>
-                <div class="codeText"> [Android, Java]</div>
-                <a href="https://www.agr.unipi.it/halofarms">HaloFarMs</a> è un progetto internazionale che coinvolge
-                diversi paesi dell'area del Mediterraneo.
-                Mira a
-                contribuire in modo significativo all’ottimizzazione di sistemi agricoli e sistemi produttivi innovativi
-                e sostenibili nella regione del Mediterraneo.
-                Gli obbiettivi di HaloFarMs saranno raggiunti sviluppando innovazioni a diversi livelli, una di queste
-                innovazioni è l'app da me ideata e sviluppata durante il tirocinio presso il Dipartimento di Informatica
-                dell'Università di Pisa in collaborazione con quello di Agraria. <br>
-                L'obbiettivo è stato quello di creare un'applicazione Android che assista il coltivatore durante la
-                coltivazione; le specifiche sono state le seguenti. <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nell'ambito di un progetto in corso di svolgimento presso il Dipartimento
-                di Agraria si sta studiando come utilizzare piante alofite (che abbassano il contenuto di sale nel
-                terreno) per consentire le coltivazioni orticole anche in terreni salini. L'idea è di studiare possibili
-                abbinamenti di alofite e altre piante che rendano la coltivazione possibile. Per fare questo è
-                necessario partire da una misurazione del livello di salinità del terreno che consenta di valutare quale
-                strategia di utilizzo delle piante alofite possa essere più efficace.<br>
-                Per supportare l'agricoltore in queste misurazioni e durante la coltivazione, l'idea è stata quella di
-                realizzare una app Android che consenta di:
-                <ol>
-                    <li>Identificare il perimetro dell'area da coltivare, utilizzando il GPS.</li>
-                    <li>Determinare i punti in cui effettuare campionamenti di terreno per testarne la salinità
-                        (assistendo anche il coltivatore nell'etichettatura dei campioni).</li>
-                    <li>Sulla base dei risultati delle analisi di salinità, mostrare una heat map del terreno per
-                        suggerire la metodologia di coltivazione più adatta per ogni area.</li>
-                    <li>Mantenere uno storico dei risultati delle analisi di salinità in un database online.</li>
-                </ol>
-                Di seguito una demo dell'applicazione: <br>
-                <img src="https://raw.githubusercontent.com/fedehsq/HaloFarms_App/main/demo.gif"
-                    style="width:100%;margin-top:16px">
-                <br>
-                <br>
-                <br>
-
-                <p id="mobileApp">
-                <h3>Applicazioni mobili</h3>
-                <br>
-                <b style="color: blue;">Libretto UniPi</b>
-                <br>
-                <a
-                    href='https://play.google.com/store/apps/details?id=com.fedeveloper.libretto&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
-                        alt='Disponibile su Google Play'
-                        src='https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png'
-                        style="width: 185px;" /></a>
-                <br>
-                L'idea è quella di offrire un'applicazione semplice ed intuitiva che permetta ad uno studente UniPi di
-                tenere sotto controllo efficientemente le
-                principali informazioni della sua carriera universitaria. <br>
-                In particolare si avrà accesso a:
-                <ul>
-                    <li>Informazioni personali</li>
-                    <li>Libretto universitario</li>
-                    <li>Appelli</li>
-                    <li>Statistiche</li>
-                    <li>Tasse</li>
-                    <li>Orario delle lezioni, personalizzabile</li>
-                </ul>
-                <div class="row" style="margin-top: 16px;">
-                    <div class="col">
-                        <img src="./images/libretto/1.png" style="width: 100%;">
-                    </div>
-                    <div class="col">
-                        <img src="./images/libretto/2.png" style="width:100%;">
-                    </div>
-                    <div class="col">
-                        <img src="./images/libretto/3.png" style="width:100%;">
-                    </div>
-                    <div class="col">
-                        <img src="./images/libretto/5.png" style="width:100%;">
-                    </div>
-                </div>
-                <br>
-                <br>
-                <br>
-
-                <b><a href="https://github.com/fedehsq/WhatsApp_clone" ;>WhatsApp_clone</b></a>
-                <div class="codeText"> [Flutter, Dart, JavaScript, Node.js]</div>
-                Una replica di WhatsApp che ne emula le principali funzionalità. <br>
-                Il client è stato implementato utilizzando Flutter. <br>
-                Il server è stato implementato utilizzando Node.js. <br>
-                <div class="row" style="margin-top: 16px;">
-                    <div class="col">
-                        <img src="https://raw.githubusercontent.com/fedehsq/WhatsApp_clone/master/screens/welcome_clone.png"
-                            style="width:100%;">
-                    </div>
-                    <div class="col">
-                        <img src="https://raw.githubusercontent.com/fedehsq/WhatsApp_clone/master/screens/welcome_real.png"
-                            style="width:100%;">
-                    </div>
-                    <div class="col">
-                        <img src="https://raw.githubusercontent.com/fedehsq/WhatsApp_clone/master/screens/chat_clone_mi8.png"
-                            style="width:100%;">
-                    </div>
-                    <div class="col">
-                        <img src="https://raw.githubusercontent.com/fedehsq/WhatsApp_clone/master/screens/chat_clone_iphonex.png"
-                            style="width:100%;">
-                    </div>
-
-                </div>
-
-                <br>
-                <br>
-                <!--<b><a href="https://github.com/fedehsq/WarehouseManagement" ;>WarehouseManagement</b></a>
-                <div class="codeText"> [Flutter, Dart]</div>
-                Lo scopo dell'app è quello di permettere una gestione efficiente del magazzino del reparto U.S.S.D.
-                Radiologia Interventistica dell'Ospedale Apuane (NOA).
-               
-                            L'utente quando apre l'applicazione ha la possibilità di scegliere quale magazzino visualizzare, all'interno di questa pagina avrà a disposizione tutti gli oggetti di quel magazzino, con relativa foto, descrizione e quantità.
-                        Ha inoltre la possibilità di marcare un oggetto come non disponibile, la possibilità di inserire quanti ne sono ancora rimanenti, ecc. 
-                        Ogni modifica del magazzino viene sincronizzata su un documento Google in comune a tutti i possessori dell'app.   
-                        
-                <br> <br>-->
-                <b><a href="https://github.com/fedehsq/openai_chatbot" ;>openai_chatbot</b></a>
-                <div class="codeText"> [Flutter, Dart]</div>
-                Questa app mobile, costruita con Flutter, utilizza la potenza delle API di completamento del testo e
-                DALL-E di OpenAI per offrire agli utenti un'esperienza di chatbot all'avanguardia. <br>
-                L'obiettivo dell'app è di fornire un'interfaccia user-friendly per consentire agli utenti di interagire
-                con tecnologie avanzate di intelligenza artificiale e di esplorare le capacità dei potenti modelli di
-                intelligenza artificiale di OpenAI. <br>
-                Che tu stia cercando di fare una chiacchierata informale o di ottenere informazioni su un argomento
-                specifico, questa app è lo strumento perfetto per il lavoro. <br>
-                Vivi il futuro della comunicazione alimentata dall'IA con questa app.
-                <br>
-                <img src="./images/jane.gif" style="width: 30%;">
-                <br>
-                <br>
-                
-                <!--
-                <b><a href="https://github.com/fedehsq/management" ;>Management</b></a>
-                <div class="codeText"> [Android, Java]</div>
-                Una semplice app in stile Material Design per la gestione delle società di camion di gas. I dati vengono
-                archiviati utilizzando Room database. <br>
-                <br> <br>
-                <-->
-                </p>
-                </p>
+              <li>Sviluppo e manutenzione di backend enterprise con focus su stabilita e sicurezza.</li>
+              <li>Collaborazione con team cross-funzionali per integrazioni e rilascio di nuove funzionalita.</li>
+              <li>Ottimizzazione di performance e osservabilita su servizi critici.</li>
+            </ul>
+          </article>
+          <article class="timeline-item" data-reveal style="--delay: 0.1s;">
+            <div class="timeline-header">
+              <h3>Libero Professionista, Mobile Developer</h3>
+              <span class="meta"><a href="https://trusttis.com/">TrustTiS (TiS)</a> • 2024</span>
             </div>
-            <div class="cryptoBackground">
-                <p id="cryptoApp">
-                <h3>Criptovalute</h3>
-                <b><a href="https://github.com/fedehsq/btc-analysis" ;>btc-analysis</a></b>
-                <div class="codeText"> [Jupyter Notebook]</div>
-                Analisi delle transazioni di <b>Bitcoin</b> partendo dal primo blocco fino a quello di altezza 100,001,
-                minato
-                in data 29-12-2010. <br>
-                Due esempi di analisi:
-                <ol>
-                    <li>Controllare se tutte le transazioni sono valide, descrivendo eventuali problemi e rimuovendole
-                        dal dataset.</li>
-                    <li>Calcolare l'importo totale di UTXO (output di transazione non spesi)
-                        esistente a partire dall'ultimo blocco del dataset.</li>
-                </ol>
-                <br>
-                <b><a href="https://github.com/fedehsq/nft-lottery" ;>nft-lottery</a></b>
-                <div class="codeText"> [Solidity]</div>
-                L'obiettivo del progetto è implementare TRY, una lotteria che offre agli utenti oggetti da collezione
-                come premi. <br>
-                Le regole della lotteria sono ispirate al Powerball, un tipo popolare di lotteria giocata negli Stati
-                Uniti. <br>
-                La logica della lotteria deve essere implementata con uno smart contract in Solidity sulla blockchain di
-                <b>Ethereum</b>. <br>
-                Prima di aprire la lotteria, il gestore della lotteria acquista un lotto di oggetti da collezione e
-                conia un <b>Non Fungible Token (NFT)</b> per ciascuno di essi. <br>
-                Il vincitore di ogni lotteria può ricevere in premio uno o più di questi oggetti da collezione.
-                <br>
-                <br>
-                <br>
-
-                <b><a href="https://github.com/fedehsq/nft-lottery-dapp">nft-lottery-dapp</a></b>
-                <div class="codeText"> [Python, HTML, CSS, JavaScript]</div>
-                dApp (decentralised application) per la Lotteria NFT. <br>
-                La Dapp fornisce diverse interfacce, una per il gestore e una per gli utenti della
-                lotteria.
-                <div class="row" style="margin-top: 16px;">
-                    <div class="col">
-                        <img src="./images/user_profile.png" style="width:100%;">
-                    </div>
-                    <div class="col">
-                        <img src="./images/user_notifications.png" style="width:100%;">
-                    </div>
-                </div>
-                </p>
-                <br>
-                <br>
-            </div>
-
-            <div class="websiteBackground">
-                <p id="web">
-                <h3>Web</h3>
-                <b><a href="https://github.com/fedehsq/micro_mib" id="MIB" ;>message_in_a_bottle</a></b>
-                <div class="codeText"> [Python, HTML, CSS, JavaScript]</div>
-                Applicazione web realizzata con il framework <a href="https://flask.palletsprojects.com/en/2.1.x/"
-                    ;>Flask</a> come un'architettura a microservizi e configurata tramite <a
-                    href="https://www.docker.com/" ;>Docker</a>. <br>
-                Lo scopo dell'applicazione è quello di fornire una piattaforma per l'invio di messaggi in una specifica
-                data, con l'impossibilità di cancellare la schedulazione. <br>
-                <br>
-                <br>
-
-                <b><a href="https://github.com/fedehsq/fedehsq.github.io" ;>fedehsq.github.io</a></b>
-                <div class="codeText"> [HTML, CSS, JavaScript]</div>
-                Dove ti trovi adesso, il mio primo sito web. <br> <br><br>
-
-                <b><a href="https://github.com/fedehsq/fedehsq.github.io/tree/master/timetable" ;
-                        id="timetable">timetable</a></b>
-                <div class="codeText"> [Flutter, Dart]</div>
-                Sei uno studente? <b><a href="https://fedehsq.github.io/timetable" ;>Questa web app</a></b> potrebbe
-                aiutarti a gestire gli orari delle tue lezioni.
-                <br>
-                <br>
-                <br>
-                </p>
-            </div>
-
-            <div class="desktopBackground">
-                <p id="desktopApp">
-                <h3>Applicazioni desktop</h3>
-                <b><a href="https://github.com/fedehsq/openssl_chatty" ;>openssl_chatty</a></b>
-
-                <div class="codeText"> [C++]</div>
-                Il progetto consiste nell’implementazione di una applicazione client-server multithread che realizzi un
-                servizio di messagistica istantanea. <br>
-                La peculiarità dell'applicazione è che tutte le comunicazioni tra client e server, e tra i vari peer,
-                sono crittografate. <br>
-                Le funzionalità crittografiche sono state realizzate utilizzando la libreria <b>OpenSSL</b>.
-                <br><br><br>
-                <b><a href="https://github.com/fedehsq/WordQuizzle" ;>WordQuizzle</a></b>
-                <div class="codeText"> [Java]</div>
-                Il progetto consiste nell’implementazione di un sistema di sfide di traduzione italiano-inglese tra
-                utenti registrati al servizio. <br>
-                Gli utenti registrati possono sfidare i propri amici ad una gara il cui scopo è quello di tradurre in
-                inglese il maggiore numero di parole italiane proposte dal servizio. <br>
-                Il sistema consente inoltre la gestione di una rete sociale tra gli utenti iscritti. L’applicazione è
-                implementata secondo una architettura client server. <br><br><br>
-                <b><a href="https://github.com/fedehsq/ObjectStore" ;>ObjectStore</a></b>
-                <div class="codeText"> [C]</div>
-                Il progetto consiste nel realizzare un object store implementato come sistema client-server, e destinato
-                a supportare le richieste di memorizzare e recuperare blocchi di dati da parte di un gran numero di
-                applicazioni. <br>
-                La connessione fra clienti e object store avviene attraverso socket su dominio locale. In particolare,
-                sarà necessario implementare:
-                <ol>
-                    <li>La parte server (object store) come eseguibile autonomo.</li>
-                    <li>Una libreria destinata a essere incorporata nei client che si interfacci con l'object store
-                        usando il protocollo definito nelle specifiche.</li>
-                    <li>Un client di esempio che usi la libreria per testare il funzionamento del sistema.</li>
-                </ol>
-                <br>
-                </p>
-            </div>
+            <ul>
+              <li>Sviluppo di app mobile in ambito medicale con requisiti di affidabilita elevati.</li>
+              <li>Design e implementazione di flussi core per utenti e operatori sanitari.</li>
+              <li>Integrazione con backend e sistemi di notifica, con attenzione alla privacy.</li>
+            </ul>
+          </article>
         </div>
-    </div>
-    <div class="whiteText">
-        <p id="contact">
-        <h2>Contatti</h2>
-        <a href="mailto:dev@federicobernacca.com" style="color: #4678d6">dev@federicobernacca.com</a> <br> <br>
-        <img src="icons/instagram.png" id="igIcon" onmouseover="className = 'hover'" onclick="onClickListner(this.id)"
-            style="width: 30px;">
-        <br>
-        <br>
-        </p>
-</body>
+      </div>
+    </section>
 
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <p class="section-label">Progetti</p>
+          <h2>Esperienze concrete, prodotti rilasciati</h2>
+          <p class="section-subtitle">Alcuni lavori selezionati. Per la lista completa visita il mio profilo:</p>
+          <div class="section-actions">
+            <a class="btn ghost btn-icon" href="https://github.com/fedehsq">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2c-5.52 0-10 4.48-10 10 0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.04 1.53 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 2.5-.34c.85 0 1.71.12 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"></path>
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div class="card-grid">
+          <article class="card project-card" data-reveal>
+            <div class="card-header">
+              <h3>Follow Guard</h3>
+              <span class="tag">Flutter • Mobile</span>
+            </div>
+            <p>
+              App per il controllo dei follower senza necessita di login, con focus su privacy e sicurezza.
+            </p>
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.fedeveloper.follow_guard">
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png" alt="Disponibile su Google Play" loading="lazy">
+            </a>
+          </article>
+          <article class="card project-card" data-reveal style="--delay: 0.05s;">
+            <div class="card-header">
+              <h3>Libretto UniPi</h3>
+              <span class="tag">Flutter • Mobile</span>
+            </div>
+            <p>
+              Applicazione per gestire carriera universitaria, esami, statistiche e orario delle lezioni.
+            </p>
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.fedeveloper.libretto">
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png" alt="Disponibile su Google Play" loading="lazy">
+            </a>
+          </article>
+          <article class="card project-card" data-reveal style="--delay: 0.1s;">
+            <div class="card-header">
+              <h3>Vault Auth Plugin</h3>
+              <span class="tag">Go • Security</span>
+            </div>
+            <p>
+              Sistema di accesso controllato con bastion host e Vault per orchestrare workflow autorizzativi e auditing.
+            </p>
+            <a class="card-link" href="https://github.com/fedehsq/vault-auth-plugin">Vedi progetto</a>
+          </article>
+          <article class="card project-card" data-reveal style="--delay: 0.15s;">
+            <div class="card-header">
+              <h3>HaloFarms App</h3>
+              <span class="tag">Android • Java</span>
+            </div>
+            <p>
+              App scientifica per la gestione di colture alofite con mappatura GPS, analisi dati e reportistica.
+            </p>
+            <a class="card-link" href="https://github.com/Unipisa/HaloFarms_App">Vedi progetto</a>
+          </article>
+          <article class="card project-card" data-reveal style="--delay: 0.2s;">
+            <div class="card-header">
+              <h3>WhatsApp Clone</h3>
+              <span class="tag">Flutter • Node.js</span>
+            </div>
+            <p>
+              Replica funzionale con chat realtime, UX mobile e backend Node per gestione sessioni e messaggi.
+            </p>
+            <a class="card-link" href="https://github.com/fedehsq/WhatsApp_clone">Vedi progetto</a>
+          </article>
+          <article class="card project-card" data-reveal style="--delay: 0.25s;">
+            <div class="card-header">
+              <h3>OpenAI Chatbot</h3>
+              <span class="tag">Flutter • AI</span>
+            </div>
+            <p>
+              App mobile con chatbot basato su API OpenAI e generazione immagini, con UI user-friendly.
+            </p>
+            <a class="card-link" href="https://github.com/fedehsq/openai_chatbot">Vedi progetto</a>
+          </article>
+          <article class="card project-card" data-reveal style="--delay: 0.3s;">
+            <div class="card-header">
+              <h3>Timetable</h3>
+              <span class="tag">Flutter • Web</span>
+            </div>
+            <p>
+              Web app per studenti per creare e condividere orari personalizzati con UI mobile-first.
+            </p>
+            <a class="card-link" href="https://fedehsq.github.io/timetable">Apri web app</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="articles">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <p class="section-label">Articoli</p>
+          <h2>Approfondimenti e note tecniche</h2>
+          <p class="section-subtitle">Selezione di articoli e riflessioni su backend, mobile e sicurezza.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card" data-reveal>
+            <div class="card-header">
+              <h3>Follow Guard: sicurezza mobile defensive-first</h3>
+              <span class="tag">Mobile Security</span>
+            </div>
+            <p>
+              Follow Guard è una app mobile dove la sfida principale è stata la sicurezza: in ambito
+              mobile il client non è affidabile e l'assenza di autenticazione impone vincoli architetturali specifici.
+            </p>
+            <a class="card-link" href="articles/follow-guard.html">Leggi articolo</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card" data-reveal>
+          <div>
+            <p class="section-label">Contatti</p>
+            <h2>Parliamo del tuo prossimo progetto</h2>
+            <p class="section-subtitle">
+              Scrivimi per collaborazioni, consulenze o semplicemente per un confronto tecnico.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <div class="social-links" aria-label="Social">
+              <a class="social-link" href="https://github.com/fedehsq" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2c-5.52 0-10 4.48-10 10 0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.04 1.53 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 2.5-.34c.85 0 1.71.12 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"></path>
+                </svg>
+                GitHub
+              </a>
+              <a class="social-link" href="https://www.linkedin.com/in/federico-bernacca-9865983a2/" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20.45 20.45h-3.56v-5.38c0-1.28-.02-2.93-1.78-2.93-1.79 0-2.06 1.4-2.06 2.84v5.47H9.5V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path>
+                </svg>
+                LinkedIn
+              </a>
+              <a class="social-link" href="https://www.instagram.com/fedehsq/" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5.25-2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                </svg>
+                Instagram
+              </a>
+            </div>
+            <a class="btn primary" href="mailto:dev@federicobernacca.com">dev@federicobernacca.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Federico Bernacca. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>

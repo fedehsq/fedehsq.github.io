@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Approccio defensive-first alla sicurezza mobile: Follow Guard.">
+  <title>Follow Guard: sicurezza mobile defensive-first</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Principale">
+      <a class="logo" href="../index.html#top">FB.</a>
+      <div class="nav-links" id="primary-nav">
+        <a href="../index.html#projects">Progetti</a>
+        <a href="../index.html#articles">Articoli</a>
+        <a href="../index.html#contact">Contatti</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container" data-reveal>
+        <p class="section-label">Articoli</p>
+        <h1>Follow Guard: sicurezza mobile defensive-first</h1>
+        <p class="section-subtitle">
+          Un progetto mobile in produzione dove la sicurezza è stata il requisito principale fin dall'inizio.
+        </p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container article-content" data-reveal>
+        <p class="article-lead">
+          Nell'ultimo anno ho lavorato allo sviluppo di Follow Guard, un'app mobile progettata come prodotto reale
+          in produzione, dove la sfida principale non è stata solo funzionale, ma soprattutto di sicurezza mobile.
+        </p>
+        <div class="article-block">
+          <h2>Perché la sicurezza mobile è complessa</h2>
+          <p>In un contesto mobile:</p>
+          <ul>
+            <li>il client non è affidabile</li>
+            <li>il codice è distribuibile e analizzabile</li>
+            <li>non esiste una vera sicurezza lato app</li>
+            <li>l'assenza di autenticazione utente introduce ulteriori vincoli architetturali</li>
+          </ul>
+        </div>
+        <div class="article-block">
+          <h2>Approccio defensive-first</h2>
+          <p>
+            Il progetto è stato quindi impostato fin dall'inizio con un approccio defensive-first, adottando
+            contromisure concrete:
+          </p>
+          <ul>
+            <li>APK offuscato per ridurre la leggibilità del codice e aumentare la difficoltà di reverse engineering</li>
+            <li>Protezione da manomissione e reverse engineering tramite strumenti di runtime protection</li>
+            <li>Verifica che le richieste provengano da un'istanza dell'app non compromessa</li>
+            <li>Assenza di identificazione dell'utente: nessun account o credenziali utente</li>
+            <li>Identificazione dell'istanza applicativa tramite device token, hashato lato client e verificato dal backend</li>
+            <li>Validazioni e controlli lato backend, riducendo al minimo la fiducia nel client</li>
+            <li>Riduzione della superficie di attacco, spostando la logica sensibile sul backend</li>
+          </ul>
+        </div>
+        <div class="article-block">
+          <h2>Risultato</h2>
+          <p>
+            Il risultato è un'architettura che non presume fiducia nel client, ma la verifica continuamente,
+            accettando i limiti intrinseci del mobile e lavorando per mitigarli in modo pragmatico.
+            Un progetto che mi ha permesso di affrontare problematiche reali di sicurezza mobile, bilanciando
+            protezione, usabilità e sostenibilità operativa.
+          </p>
+        </div>
+        <div class="section-actions">
+          <a class="btn ghost" href="../index.html#articles">Torna agli articoli</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2024 Federico Bernacca. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
