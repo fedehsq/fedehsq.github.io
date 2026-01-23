@@ -357,6 +357,13 @@ a:hover {
   color: var(--muted);
 }
 
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: var(--space-2);
+}
+
 .card-link {
   display: inline-flex;
   margin-top: var(--space-3);
@@ -501,6 +508,11 @@ a:hover {
   margin-bottom: var(--space-4);
 }
 
+.article-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
 .article-block {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border);
@@ -523,6 +535,18 @@ a:hover {
 
 .article-block li + li {
   margin-top: 0.4rem;
+}
+
+.pin {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 181, 164, 0.45);
+  background: rgba(17, 181, 164, 0.12);
+  color: var(--text);
+  font-weight: 600;
+  margin: 0.2rem 0;
+  line-height: 1.7;
 }
 
 [data-reveal] {
