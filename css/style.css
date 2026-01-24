@@ -30,6 +30,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -40,19 +41,21 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   position: relative;
+  width: 100%;
   overflow-x: hidden;
 }
 
 body::before,
 body::after {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: auto;
   z-index: -1;
   width: 520px;
   height: 520px;
   background: radial-gradient(circle, rgba(17, 181, 164, 0.22), transparent 70%);
   filter: blur(10px);
+  pointer-events: none;
 }
 
 body::before {
