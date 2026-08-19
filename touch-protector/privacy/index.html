@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Touch Protector - Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            background: #fafafa;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 1rem;
+        }
+
+        .flag {
+            cursor: pointer;
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+        }
+
+        .content {
+            display: none;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        code {
+            background: #f0f0f0;
+            padding: 0.1rem 0.3rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Touch Protector - Privacy Policy</h1>
+
+    <div class="lang-switch">
+        <span class="flag" data-lang="en">🇬🇧</span>
+        <span class="flag" data-lang="it">🇮🇹</span>
+    </div>
+
+    <!-- Italiano -->
+    <div id="it" class="content active">
+        <p><strong>Ultimo aggiornamento: 19 agosto 2026</strong></p>
+
+        <h3>1. In breve</h3>
+        <p>Touch Protector <strong>non raccoglie, non trasmette e non condivide alcun dato personale</strong>. L'app non
+            ha accesso a internet e non contiene pubblicità né strumenti di analisi.</p>
+
+        <h3>2. Dati trattati</h3>
+        <p>L'unica cosa che l'app salva sono le tue preferenze: il gesto di sblocco scelto, l'attivazione della modalità
+            buio, lo spegnimento del display a schermo coperto, il timer di sblocco automatico, la vibrazione e la
+            lingua. Restano nella memoria privata dell'app sul tuo dispositivo, non vengono inviate a nessuno e si
+            cancellano disinstallando l'app.</p>
+        <p>Il contatore dei tocchi bloccati esiste solo nella memoria volatile durante una sessione di blocco e non
+            viene salvato.</p>
+
+        <h3>3. Permessi richiesti e perché</h3>
+        <ul>
+            <li><strong>Disegno sopra altre app</strong> (<code>SYSTEM_ALERT_WINDOW</code>): serve a mostrare la
+                finestra che assorbe i tocchi, cioè la funzione stessa dell'app. Quella finestra non legge nulla di ciò
+                che c'è sotto: si limita a ricevere i tocchi al posto dell'app sottostante.</li>
+            <li><strong>Notifiche</strong> (<code>POST_NOTIFICATIONS</code>): serve a mostrare la notifica permanente,
+                che dice che il blocco è attivo e contiene il pulsante Sblocca, una delle vie di uscita dal blocco.</li>
+            <li><strong>Servizio in primo piano</strong> (<code>FOREGROUND_SERVICE</code>,
+                <code>FOREGROUND_SERVICE_SPECIAL_USE</code>): mantiene attivo il blocco finché non lo disattivi.</li>
+            <li><strong>Wake lock</strong> (<code>WAKE_LOCK</code>): serve solo a spegnere il display quando il sensore
+                di prossimità è coperto, se attivi quell'opzione.</li>
+        </ul>
+        <p>L'app non richiede permessi di posizione, fotocamera, microfono, contatti, archiviazione o telefono.</p>
+
+        <h3>4. Rilevamento delle chiamate</h3>
+        <p>Per sospendere il blocco quando arriva una chiamata, l'app osserva la modalità audio del sistema (su Android
+            12 e successivi) o lo stato della linea (sulle versioni precedenti). Legge soltanto se una chiamata è in
+            corso: non accede al numero di telefono, all'identità del chiamante né al registro chiamate.</p>
+
+        <h3>5. Cancellazione dei dati</h3>
+        <p>Disinstallando l'app le preferenze salvate spariscono con lei. Non esiste nessuna copia altrove.</p>
+
+        <h3>6. Contatti</h3>
+        <p>Per qualsiasi domanda su questa informativa:<br>
+            <strong>Federico Bernacca</strong><br>
+            📧 <a href="mailto:dev@federicobernacca.com">dev@federicobernacca.com</a>
+        </p>
+    </div>
+
+    <!-- English -->
+    <div id="en" class="content">
+        <p><strong>Last update: 19 August 2026</strong></p>
+
+        <h3>1. In short</h3>
+        <p>Touch Protector <strong>does not collect, transmit or share any personal data</strong>. The app has no
+            internet access and contains no ads and no analytics.</p>
+
+        <h3>2. Data processed</h3>
+        <p>The only thing the app stores is your preferences: the chosen unlock gesture, blackout mode, screen off when
+            the display is covered, the automatic unlock timer, vibration and language. They stay in the app's private
+            storage on your device, are never sent anywhere, and are deleted when you uninstall the app.</p>
+        <p>The blocked touches counter only lives in volatile memory during a lock session and is never saved.</p>
+
+        <h3>3. Permissions requested, and why</h3>
+        <ul>
+            <li><strong>Display over other apps</strong> (<code>SYSTEM_ALERT_WINDOW</code>): needed to show the window
+                that absorbs touches, which is the app's own purpose. That window reads nothing of what is underneath:
+                it simply receives the touches instead of the app below.</li>
+            <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): needed for the ongoing notification,
+                which tells you the lock is active and carries the Unlock button, one of the ways out of the lock.</li>
+            <li><strong>Foreground service</strong> (<code>FOREGROUND_SERVICE</code>,
+                <code>FOREGROUND_SERVICE_SPECIAL_USE</code>): keeps the lock alive until you turn it off.</li>
+            <li><strong>Wake lock</strong> (<code>WAKE_LOCK</code>): used only to turn the display off when the
+                proximity sensor is covered, if you enable that option.</li>
+        </ul>
+        <p>The app requests no location, camera, microphone, contacts, storage or phone permissions.</p>
+
+        <h3>4. Call detection</h3>
+        <p>To suspend the lock when a call comes in, the app watches the system audio mode (on Android 12 and later) or
+            the call state (on earlier versions). It only reads whether a call is in progress: it never accesses the
+            phone number, the caller identity or the call log.</p>
+
+        <h3>5. Data deletion</h3>
+        <p>Uninstalling the app removes the stored preferences with it. There is no copy anywhere else.</p>
+
+        <h3>6. Contact</h3>
+        <p>For any question about this policy:<br>
+            <strong>Federico Bernacca</strong><br>
+            📧 <a href="mailto:dev@federicobernacca.com">dev@federicobernacca.com</a>
+        </p>
+    </div>
+
+    <script>
+        const flags = document.querySelectorAll('.flag');
+        const contents = document.querySelectorAll('.content');
+
+        flags.forEach(flag => {
+            flag.addEventListener('click', () => {
+                const lang = flag.dataset.lang;
+                contents.forEach(c => c.classList.remove('active'));
+                document.getElementById(lang).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
