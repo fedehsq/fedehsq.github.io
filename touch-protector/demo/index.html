@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Touch Protector - Foreground service demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            background: #fafafa;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        video {
+            display: block;
+            margin: 0 auto;
+            max-height: 70vh;
+            max-width: 100%;
+            border-radius: 8px;
+            background: #000;
+        }
+
+        ol {
+            padding-left: 1.2rem;
+        }
+
+        code {
+            background: #f0f0f0;
+            padding: 0.1rem 0.3rem;
+            border-radius: 4px;
+        }
+
+        .note {
+            color: #555;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Touch Protector - <code>FOREGROUND_SERVICE_SPECIAL_USE</code></h1>
+
+    <div class="card">
+        <video src="foreground-service.mp4" controls playsinline preload="metadata"></video>
+
+        <p>This screen recording shows what the foreground service does while it runs, on a Pixel 10 Pro
+            (Android 17):</p>
+
+        <ol>
+            <li>The user turns the touch lock on from the app.</li>
+            <li>The lock is a full-screen overlay that absorbs touches, so the screen stops responding.
+                The service keeps that overlay alive: it is the work the user asked for, and it must
+                last until the user ends it.</li>
+            <li>The ongoing notification posted by the foreground service is visible in the notification
+                shade. It states that the lock is active and carries the <strong>Unlock</strong> button,
+                one of the ways out of the lock.</li>
+            <li>The user unlocks with the on-screen gesture; the overlay disappears and the service
+                stops immediately.</li>
+        </ol>
+
+        <p class="note">The quick settings area is blurred because it showed the network name and personal
+            device names. The app itself uses no network, no location, no camera and no microphone, and
+            the lock is never restored automatically after a reboot.</p>
+
+        <p class="note">Privacy policy: <a href="/touch-protector/privacy/">federicobernacca.com/touch-protector/privacy/</a></p>
+    </div>
+</body>
+
+</html>
