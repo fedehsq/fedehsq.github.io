@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://federicobernacca.com/articles/fibo-uni-web-scraping.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://federicobernacca.com/articles/composer-2-5-daily-work.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>

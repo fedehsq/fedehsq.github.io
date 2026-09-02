@@ -391,6 +391,19 @@ a:hover {
   transform: scale(1.03);
 }
 
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.card-actions .store-badge,
+.card-actions .card-link {
+  margin-top: 0;
+}
+
 .timeline {
   display: grid;
   gap: var(--space-4);

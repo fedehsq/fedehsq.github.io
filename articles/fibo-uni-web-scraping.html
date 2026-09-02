@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="Dietro Fibo Uni: 13 fonti diverse, scraping e API non documentate, normalizzate da un unico backend in normali API REST.">
+  <title>13 fonti, una sola API</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Principale">
+      <a class="logo" href="../index.html#top">FB.</a>
+      <div class="nav-links" id="primary-nav">
+        <a href="../index.html#projects">Progetti</a>
+        <a href="../index.html#articles">Articoli</a>
+        <a href="../index.html#contact">Contatti</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container" data-reveal>
+        <p class="section-label">Articoli</p>
+        <h1>Che spettacolo il web scraping</h1>
+        <p class="section-subtitle">
+          13 fonti diverse, una sola API. È uno degli aspetti più interessanti dietro Fibo Uni.
+        </p>
+        <div class="tag-group">
+          <span class="tag">Web Scraping</span>
+          <span class="tag">Backend</span>
+          <span class="tag">API</span>
+          <span class="tag">Fibo Uni</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container article-content" data-reveal>
+        <p class="article-lead">
+          Orari delle lezioni, aule, appelli, mense, biblioteche, autobus, treni, bici, avvisi dell'ateneo e molto
+          altro arrivano da ben 13 fonti differenti. E, ovviamente, ognuna parla una lingua diversa.
+        </p>
+        <div class="article-block">
+          <h2>Tredici fonti, tredici linguaggi</h2>
+          <ul>
+            <li>Alcune espongono API vere e proprie.</li>
+            <li>Altre hanno API non documentate, utilizzate direttamente dai loro siti.</li>
+            <li>
+              Altre ancora richiedono scraping dell'HTML, parsing, normalizzazione e gestione di identificativi che
+              possono cambiare senza preavviso.
+            </li>
+          </ul>
+        </div>
+        <div class="article-block">
+          <h2>La soluzione? L'app non deve sapere niente di tutto questo</h2>
+          <p>
+            L'app parla con un solo backend. È il backend a interrogare le varie fonti, fare scraping dove serve,
+            utilizzare le API quando esistono, normalizzare i dati e restituirli attraverso delle normali API REST.
+          </p>
+          <p>
+            In questo modo una mensa, un'aula, un appello o una biblioteca smettono di essere “quel dato preso da quel
+            particolare sito in quel particolare formato”. Diventano semplicemente dati.
+          </p>
+        </div>
+        <div class="article-block">
+          <h2>Tutta la parte fragile resta dove deve stare</h2>
+          <ul>
+            <li>Se una pagina cambia struttura, si aggiorna il parser e si fa un deploy.</li>
+            <li>
+              Se una fonte temporaneamente non risponde, può entrare in gioco la cache e continuare a servire l'ultima
+              risposta valida.
+            </li>
+            <li>
+              Se più utenti chiedono la stessa informazione, non è necessario moltiplicare inutilmente le richieste
+              verso la fonte originale.
+            </li>
+          </ul>
+        </div>
+        <div class="article-block">
+          <h2>La parte più bella</h2>
+          <p>
+            Ed è forse questa la parte più bella del web scraping: trasformare fonti pensate per essere consultate da
+            persone in dati strutturati pensati per essere utilizzati dal software.
+          </p>
+          <p>
+            Il web è pieno di dati. Il vero lavoro è renderli affidabili, coerenti e utilizzabili.
+          </p>
+          <p>
+            <a href="https://fibo.federicobernacca.com/" target="_blank" rel="noreferrer">Scopri Fibo Uni</a>
+          </p>
+        </div>
+        <div class="section-actions">
+          <a class="btn ghost" href="../index.html#articles">Torna agli articoli</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Federico Bernacca. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
